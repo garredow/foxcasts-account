@@ -1,1 +1,1 @@
-# foxcasts-account-web
+# podsync-web

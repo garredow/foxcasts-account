@@ -8,11 +8,11 @@
 
 	onMount(async () => {
 		client = await createAuth0Client({
-			domain: 'foxcasts-dev.us.auth0.com',
-			client_id: '5di99ZNlpU7AFFWerZAouhQKXpKxJe1e',
+			domain: 'podsync-dev.us.auth0.com',
+			client_id: 'Mbk1BaY6Ql6n4pAgJvPOfDpTG7X1BGqt',
 			redirect_uri: window.location.origin,
 			scope: 'read:current_user update:current_user_metadata offline_access openid',
-			audience: 'com.foxcasts.api'
+			audience: 'cloud.podsync.api'
 		});
 
 		isAuthenticated.set(await client.isAuthenticated());
@@ -38,7 +38,7 @@
 </script>
 
 <svelte:head>
-	<title>Foxcasts Cloud</title>
+	<title>PodSync</title>
 </svelte:head>
 
 <a class="btn" href="/#" on:click={login}>Log In</a>
